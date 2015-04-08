@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="description" content="FM7Segm : ATmega8-based simple FM tuner clock and temperature">
+		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<title>FM7Segm</title>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<a id="forkme_banner" href="https://github.com/WiseLord/fm7segm">View on GitHub</a>
+
+				<h1 id="project_title">FM7segm</h1>
+				<h2 id="project_tagline">Simple FM tuner with clock and temperature</h2>
+
+				<div id="downloads">
+					<a class="zip_download_link" href="https://github.com/WiseLord/fm7segm/zipball/master">Download as a .zip file</a>
+					<a class="tar_download_link" href="https://github.com/WiseLord/fm7segm/tarball/master">Download as a tar.gz file</a>
+				</div>
+			</header>
+		</div>
+
+		<!-- MAIN CONTENT -->
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+				<h2 id="fm7segm" aria-hidden="true">Project overview</h2>
+				<p>
+					This project is a simple FM radio tuner with 4-digits LED indication. Up to 50 FM stations can
+					be stored in EEPROM memory of ATmega8 MCU. Also device can show current time and temperature.
+				</p>
+				<iframe width="640" height="360" src="https://www.youtube.com/embed/3I_dFwAWISo" style="border: 0;" allowfullscreen></iframe>
+
+				<h2 id="main-features" aria-hidden="true">Main features:</h2>
+				<ul>
+					<li>Up to 50 FM stations can be stored in EEPROM.</li>
+					<li>Works with both common anode and common cathode LED indicators, wired as directly
+					to MCU pins as via transistor switches.
+					<li>12 levels of brightness</li>
+					<li>16 levels of volume</li>
+					<li>Stations are always saved sorted</li>
+					<li>RTC DS1307 support (DS3231 also works)</li>
+					<li>Temperature measurement with DS18B20 sensors</li>
+				</ul>
+				<h2 id="supported-fm-tuners" aria-hidden="true">Supported FM tuners:</h2>
+				<ul>
+					<li>TEA5767 via I²C bus</li>
+					<li>RDA5807M via I²C bus</li>
+					<li>TUX032 (can be found in some Sony Car Audio) via I²C bus</li>
+				</ul>
+				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
+				<ul>
+					<li><a href="http://radiokot.ru/circuit/digital/home/202/">First article about project (in Russian)</a></li>
+					<li><a href="http://www.radiokot.ru/forum/viewtopic.php?t=109632">Forum thread (in Russian)</a></li>
+				</ul>
+			</section>
+		</div>
+
+		<!-- FOOTER  -->
+		<div id="footer_wrap" class="outer">
+			<footer class="inner">
+				<p class="copyright">FM7Segm project is maintained by <a href="https://github.com/WiseLord">WiseLord</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
