@@ -16,14 +16,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 10px 0;
+	margin: 5px 0;
 	color:#222222;
 	font-family: 'Arial', 'Calibri', sans-serif;
 	letter-spacing: -1px;
 }
 
 p {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 footer p {
@@ -175,8 +175,8 @@ Full-Width Styles
 #forkme_banner {
   display: block;
   position: absolute;
-  top:0;
-  right: 0px;
+  top:-5px;
+  right: -5px;
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: #fff;
@@ -196,7 +196,7 @@ Full-Width Styles
 }
 
 #project_title {
-  margin: 0 0 0 50px;
+  margin: 0 0 0 54px;
   color: #fff;
   font-size: 42px;
   font-weight: 700;
@@ -213,10 +213,10 @@ Full-Width Styles
 
 #home_link {
   position: absolute;
-  height: 32px;
-  width: 32px;
-  top: 16px;
-  left: 10px;
+  height: 48px;
+  width: 48px;
+  top: 4px;
+  left: 4px;
   background: url('../images/icon_home.png') no-repeat 0% 90%;
 }
 
