@@ -10,7 +10,7 @@ body {
 	color:#373737;
 	background: #404040;
 	font-size: 18px;
-	font-family: 'Sans Serif', 'Calibri', 'Helvetica', 'Arial', sans-serif;
+	font-family: 'Arial', 'Calibri', sans-serif;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 }
@@ -18,7 +18,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin: 10px 0;
 	color:#222222;
-	font-family: 'Sans Serif', 'Calibri', 'Helvetica', 'Arial', sans-serif;
+	font-family: 'Arial', 'Calibri', sans-serif;
 	letter-spacing: -1px;
 }
 
@@ -75,7 +75,7 @@ pre, code {
   color: #222;
   background-color: #fff;
 
-  font-family: 'Monospace', "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family: 'Monospace', "Lucida Console", monospace;
   font-size: 14px;
 
   border-radius: 2px;
