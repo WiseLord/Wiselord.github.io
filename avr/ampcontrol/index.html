@@ -27,11 +27,11 @@
 			<section id="main_content" class="inner">
 				<h2>Project overview</h2>
 				<p>
-					This system represents amplifier control module supporting various audio processors
-					with I²C interface. Control can be managed via RC5 remote control or from
-					front panel with 5 buttons and rotary encoder. All required information during
-					control is displayed on monochrome graphic LCD, which can also display results
-					of signal spectrum analysis.
+					This system is an amplifier control module supporting various audio processors
+					with I²C interface. It managed via RC5 or NEC infrared remote control or from
+					front panel with 5 buttons and rotary encoder. All appropriate information during
+					control is displayed on monochrome graphic LCD. When nothing is controlled, current
+					time, FM radio screen or results of signal spectrum analisis are displayed.
 				</p>
 				<iframe width="640" height="360" src="https://www.youtube.com/embed/i6dqi8C9fBk" style="border: 0;" allowfullscreen></iframe>
 
@@ -42,32 +42,34 @@
 				</p>
 				<p>
 					Alphanumeric displays with size 16x2, which based on HD44780 (KS0066) controllers
-					are also now supported.
+					are also now supported, but they don't look so cute as graphic displays.
 				</p>
 				<h2 id="main-features" aria-hidden="true">Main features:</h2>
 				<ul>
-					<li>Amplifier control (mute/standby)</li>
+					<li>Amplifier control (mute/standby external signals)</li>
 					<li>Digital audio control (feature set depends on used audio processor)</li>
-					<li>32-band spectrum analyzer (0..5kHz) displayed on graphical LCD</li>
-					<li>RC5 remotes support</li>
-					<li>FM radio support</li>
+					<li>32-band spectrum analyzer (0..5kHz)</li>
+					<li>RC5 and NEC remotes support with learning mode</li>
 					<li>Nice graphics (icons, fonts) (only on graphic LCDs)</li>
-					<li>Alarm support (can be set to any day of week)</li>
-					<li>Standby timer (can be set to time from 2 minutes to 5 hours)</li>
+					<li>Alarm support (per day of week)</li>
+					<li>Standby timer (adjustable from 2 minutes to 5 hours)</li>
 					<li>No-signal standby timer</li>
-					<li>RC5 learing mode (system can be learnt to understand any RC5 remote)</li>
-					<li>English, Russian, Belarusian, Ukrainian (and possible other) localizations</li>
-					<li>Favourite FM stations support</li>
+					<li>English, Russian, Belarusian, Ukrainian, Bulgarian (and possible other) localizations</li>
+					<li>FM radio support</li>
+					<li>Up to 50 FM stations can be saved in EEPROM</li>
+					<li>10 favourite FM stations support (mapped to 0..9 buttons of remote)</li>
 					<li>2-channels temperature control of power amplifier circuits</li>
 				</ul>
 				<h2 id="supported-audio-processors" aria-hidden="true">Supported audio processors:</h2>
 				<ul>
 					<li>TDA7439 - 4 stereo inputs, volume/bass/middle/treble/balance control</li>
 					<li>TDA7312 - 4 stereo inputs, volume/bass/treble/balance control</li>
-					<li>TDA7313 - 3 stereo inputs, volume/bass/treble/fade/balance/loudness control</li>
+					<li>TDA7313/PT2313 - 3 stereo inputs, volume/bass/treble/fade/balance/loudness control</li>
 					<li>TDA7314 - stereo input, volume/bass/treble/fade/balance/loudness control</li>
 					<li>TDA7318 - 4 stereo inputs, volume/bass/treble/fade/balance control</li>
-					<li>TDA7448 - 6-ch input, volume/balance/fade/center/subwoofer control </li>
+					<li>PT2314 - 4 stereo inputs, volume/bass/treble/fade/balance/loudness control</li>
+					<li>TDA7448 - 6-ch input, volume/fade/balance/center/subwoofer control </li>
+					<li>PT2323/PT2322 - 4 stereo inputs, 5.1 input, volume/bass/treble/fade/balance/center/subwoofer/surround/3d control</li>
 					<li>PGA2310 - high-end stereo volume/balance control </li>
 				</ul>
 				<h2 id="supported-displays" aria-hidden="true">Supported displays (for ATmega32):</h2>
@@ -94,6 +96,8 @@
 				</p>
 					Ampcontrol editor is written on Qt5 and it's sources are availiable on
 					<a href="https://github.com/WiseLord/ampcontrol/tree/master/editor">Github</a>.
+					Exetuable for windows (written on Qt) can be downloaded from
+					<a href="https://www.dropbox.com/sh/nkiajkuuobk6uvi/AABCGfvy3UZC1HBU0lJsWyqKa?dl=0">Dropbox</a>
 				</p>
 				<h2 id="alternative-sch" aria-hidden="true">Other hardware options:</h2>
 				<ul>
