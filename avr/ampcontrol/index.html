@@ -16,8 +16,8 @@
 				<h2 id="project_tagline">Amplifier control module with spectrum analyzer and FM radio</h2>
 
 				<div id="downloads">
-					<a class="zip_download_link" href="https://github.com/WiseLord/ampcontrol/zipball/master">Download as a .zip file</a>
-					<a class="tar_download_link" href="https://github.com/WiseLord/ampcontrol/tarball/master">Download as a tar.gz file</a>
+					<a class="zip_download_link" href="https://github.com/WiseLord/ampcontrol/zipball/m32">Download as a .zip file</a>
+					<a class="tar_download_link" href="https://github.com/WiseLord/ampcontrol/tarball/m32">Download as a tar.gz file</a>
 				</div>
 			</header>
 		</div>
@@ -35,7 +35,7 @@
 				</p>
 				<iframe width="640" height="360" src="https://www.youtube.com/embed/i6dqi8C9fBk" style="border: 0;" allowfullscreen></iframe>
 				<p>
-					Upstream development (git master branch) is focused on ATmega32 MCU with support
+					Upstream development (git m32 branch) is focused on ATmega32 MCU with support
 					of 128x64 monochrome graphic displays. This version provides many features, possibly 
 					missing in other possible hardware options (ATmega16, ATmega8).
 				</p>
@@ -75,10 +75,11 @@
 				</ul>
 				<h2 id="supported-displays" aria-hidden="true">Supported displays (for ATmega32):</h2>
 				<ul>
-					<li>KS0108-based 128x64 graphic display type A (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/master/files/sch/ks0108a.png">schematic</a>)</li>
-					<li>KS0108-based 128x64 graphic display type B (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/master/files/sch/ks0108b.png">schematic</a>)</li>
-					<li>ST7920-based 128x64 graphic display (same <a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/master/files/sch/ks0108a.png">schematic</a> as KS0108A)</li>
-					<li>KS0066-based 16x2 alphanumeric display (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/master/files/sch/ks0066.png">schematic</a>)</li>
+					<li>KS0108-based 128x64 graphic display type A (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0066.png">schematic</a>)</li>
+					<li>KS0108-based 128x64 graphic display type B (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108b.png">schematic</a>)</li>
+					<li>ST7920-based 128x64 graphic display <a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/st7920.png">schematic</a> (same pinout as KS0108A)</li>
+					<li>KS0066-based 16x2 alphanumeric display (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0066.png">schematic</a>)</li>
+					<li>LS020 color 176x132 display (can be found in some Siemence mobile phones like S65) controlled via hardware SPI
 				</ul>
 				<h2 id="supported-fm-tuners" aria-hidden="true">Supported FM tuners:</h2>
 				<ul>
@@ -91,13 +92,13 @@
 				<p>
 					While project uses various parameters from EEPROM memory (for example, audioprocessor and tuner selection),
 					special desktop application to edit eeprom_xx.bin was designed. It allows to load, modify and save eeprom
-					binary file in easy way. Ampcontrol editor can manage only eeprom files for main (master) branch of code.
+					binary file in easy way. Ampcontrol editor can manage only eeprom files for main (m32) branch of code.
 				<p>
 				<img src="./editor.png" width="640" />
 				</p>
 					Ampcontrol editor is written on Qt5 and it's sources are availiable on
-					<a href="https://github.com/WiseLord/ampcontrol/tree/master/editor">Github</a>.
-					Exetuable for windows (written on Qt) can be downloaded from
+					<a href="https://github.com/WiseLord/ampcontrol/tree/m32/editor">Github</a>.
+					Exetuable for windows (statically compiled) can be downloaded from
 					<a href="https://www.dropbox.com/sh/nkiajkuuobk6uvi/AABCGfvy3UZC1HBU0lJsWyqKa?dl=0">Dropbox</a>
 				</p>
 				<h2 id="alternative-sch" aria-hidden="true">Other hardware options:</h2>
@@ -106,11 +107,10 @@
 						<h4>Atmega16 branch</h4>
 						<span>
 							This branch is based on old audio and tuner architecture (initially project was started on ATmega16
-							and later main MCU was changed to ATmega32), and it additionally supports color 176x132 LS020 display
-							(can be found in some Siemence mobile phones like S65). But this option lacks many features
+							and later main MCU was changed to ATmega32), so it lacks many features
 							of upstream previously described. Only TDA7439/TDA7313/TDA7318 audio processors are
 							supported (because branch uses old audio architecture). Also in latest releases ST7920 support
-							was dropped in this branch due to very slow performance and big requirements for RAM.
+							was dropped in this branch due to very slow performance and big RAM requirements.
 						</span>
 					</li>
 					<li>
@@ -122,17 +122,19 @@
 						</span>
 					</li>
 					<li>
-						<h4>Atmega8-lcd</h4>
+						<h4>Atmega8-lcd branch</h4>
 						<span>
 							This branch is hardcoded to be used with 16x2 character display, TDA7313 audio processors
 							and it doesn't support FM radio. But it's interface localization can be switched
 							between Russian and English without EEPROM reflashing, and also it supports RC5 learning mode.
+							Both m8 and m8-lcd branches can be build for the same hardware, but pin reconfiguration may be required.
 						</span>
 					</li>
 				</ul>
 				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
 				<ul>
 					<li><a href="http://radiokot.ru/circuit/audio/other/39/">First article about project (in Russian)</a></li>
+					<li><a href="http://radiokot.ru/circuit/audio/other/45/">Second article about project (in Russian)</a></li>
 					<li><a href="http://www.radiokot.ru/forum/viewtopic.php?t=98758">Forum thread (in Russian)</a></li>
 				</ul>
 			</section>
