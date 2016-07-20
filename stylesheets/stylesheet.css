@@ -45,6 +45,15 @@ footer a {
   text-decoration: underline;
 }
 
+div.centered {
+  text-align: center;
+}
+
+div.centered, iframe {
+  display: block;
+  margin: 0 auto;
+}
+
 img {
   position: relative;
   margin: 0 auto;
@@ -135,20 +144,22 @@ hr {
 }
 
 table {
+  width: 100%;
   border: 1px solid #373737;
   margin-bottom: 20px;
   text-align: left;
+  font-size: 90%;
  }
 
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding: 10px;
+  padding: 5px;
   background: #373737;
   color: #fff;
  }
 
 td {
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #373737;
  }
 
@@ -167,7 +178,7 @@ Full-Width Styles
 
 .inner {
   position: relative;
-  max-width: 640px;
+  max-width: 960px;
   padding: 20px 10px;
   margin: 0 auto;
 }
