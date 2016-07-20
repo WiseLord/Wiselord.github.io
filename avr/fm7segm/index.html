@@ -33,31 +33,63 @@
 				<iframe width="640" height="360" src="https://www.youtube.com/embed/3I_dFwAWISo" style="border: 0;" allowfullscreen></iframe>
 
 				<h2 id="main-features" aria-hidden="true">Main features:</h2>
-				<ul>
-					<li>Up to 50 FM stations can be stored in EEPROM.</li>
-					<li>Works with both common anode and common cathode LED indicators, wired as directly
-					to MCU pins as via transistor switches.</li>
-					<li>12 levels of brightness</li>
-					<li>16 levels of volume</li>
-					<li>Stations are always saved sorted</li>
-					<li>RTC DS1307 support (DS3231 also works)</li>
-					<li>Temperature measurement with DS18B20 sensors</li>
-				</ul>
+				<table>
+					<tr><th style="width: 100%;">Feature description</th>
+						<th>Supported</th></tr>
+					<tr><td>FM radio support</td>
+						<td>yes</td></tr>
+					<tr><td>Up to 60 FM stations can be saved in EEPROM</td>
+						<td>yes</td></tr>
+					<tr><td>Common cathode indicators with direct connection do digits</td>
+						<td>yes</td></tr>
+					<tr><td>Common anode indicators with direct connection do digits</td>
+						<td>yes</td></tr>
+					<tr><td>Common cathode indicators with transistor on digits</td>
+						<td>yes</td></tr>
+					<tr><td>Common anode indicators with transistor on digits</td>
+						<td>yes</td></tr>
+					<tr><td>Indicator brightness control (12 levels)</td>
+						<td>yes</td></tr>
+					<tr><td>RDA580x internal volume control support</td>
+						<td>yes</td></tr>
+					<tr><td>PWM volume control on other tuners</td>
+						<td>yes</td></tr>
+					<tr><td>RTC DS1307 support (DS323x also are working)</td>
+						<td>yes</td></tr>
+					<tr><td>Temperature sensors DS18x20</td>
+						<td>yes</td></tr>
+				</table>
+
 				<h2 id="supported-fm-tuners" aria-hidden="true">Supported FM tuners:</h2>
-				<ul>
-					<li>TEA5767 via I²C bus</li>
-					<li>RDA5807M via I²C bus</li>
-					<li>TUX032 (can be found in some Sony Car Audio) via I²C bus</li>
-				</ul>
+				<table>
+					<tr><th style="width: 15%;">Tuner</th><th style="width: 100%;">Description</th>
+						<th>Supported</th></tr>
+					<tr><td>TEA5767</td><td>I²C FM tuner</td>
+						<td>yes</td></tr>
+					<tr><td>RDA5807</td><td>I²C FM tuner with RDS support</td>
+						<td>yes</td></tr>
+					<tr><td>TUX032</td><td>I²C FM tuner found in some Sony car radio</td>
+						<td>yes</td></tr>
+					<tr><td>LM7001</td><td>SPI-control frequency synthesizer</td>
+						<td>yes</td></tr>
+					<tr><td>RDA5802</td><td>I²C FM tuner</td>
+						<td>yes</td></tr>
+					<tr><td>RDA5807_DF</td><td>Option for RDA5807 with direct frequency input</td>
+						<td>yes</td></tr>
+				</table>
+
 				<h2 id="schematic" aria-hidden="true">Schematic:</h2>
-				<ul>
-					<li><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">First pinout</a></li>
-					<li><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin2_sch.png">Second pinout</a></li>
-				</ul>
+				<p>First pinout:</p>
+				<div class="centered"><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">
+					<img src="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png" width="640"/></a></div>
+				<p>Second pinout:</p>
+				<div class="centered"><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">
+					<img src="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin2_sch.png" width="640"/></a></div>
 				<p>
-					Both pinouts can be used with any FM tuner supported. Also indicator type (Common anode or Common cathode)
-					can be used with both pinouts, with and without. All this can be configured via Makefile and pins.h files.
+					Both pinouts can be used with any FM tuner supported and any indicator type and connection combination.
+					All this can be configured via Makefile and pins.h files.
 				</p>
+				
 				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
 				<ul>
 					<li><a href="http://radiokot.ru/circuit/digital/home/202/">First article about project (in Russian)</a></li>
