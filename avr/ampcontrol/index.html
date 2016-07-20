@@ -35,76 +35,136 @@
 				</p>
 				<iframe width="640" height="360" src="https://www.youtube.com/embed/i6dqi8C9fBk" style="border: 0;" allowfullscreen></iframe>
 				<p>
-					Upstream development (git m32 branch) is focused on ATmega32 MCU with support
-					of 128x64 monochrome graphic displays. This version provides many features, possibly 
-					missing in other possible hardware options (ATmega16, ATmega8).
-				</p>
-				<p>
+					Upstream development is focused on <a href="https://github.com/WiseLord/ampcontrol/tree/m32">ATmega32</a>
+					MCU and 128x64 graphic displays (KS0108 and ST7920 controllers).
+					This version provides many features, possibly missing in other possible hardware options.
 					Alphanumeric displays with size 16x2, which based on HD44780 (KS0066) controllers
 					are also now supported, but they don't look so cute as graphic displays.
 				</p>
+				<p>
+					Also <a href="https://github.com/WiseLord/ampcontrol/tree/m8">ATmega8</a> version is under active development.
+					But it doesn't include some features from main branch and supports only alphanumeric displays
+				</p>
+
 				<h2 id="main-features" aria-hidden="true">Main features:</h2>
-				<ul>
-					<li>Amplifier control (mute/standby external signals)</li>
-					<li>Digital audio control (feature set depends on used audio processor)</li>
-					<li>32-band spectrum analyzer (0..5kHz)</li>
-					<li>Sound level meter, various modes of spectrum analyzer look'n'feel</li>
-					<li>RC5 and NEC remotes support with learning mode</li>
-					<li>Nice graphics (icons, fonts) (only on graphic LCDs)</li>
-					<li>Alarm support (per day of week)</li>
-					<li>Standby timer (adjustable from 2 minutes to 5 hours)</li>
-					<li>No-signal standby timer</li>
-					<li>English, Russian, Belarusian, Ukrainian, Bulgarian (and possible other) localizations</li>
-					<li>FM radio support</li>
-					<li>Up to 50 FM stations can be saved in EEPROM</li>
-					<li>10 favourite FM stations support (mapped to 0..9 buttons of remote)</li>
-					<li>2-channels temperature control of power amplifier circuits</li>
-				</ul>
+				<table>
+					<tr><th style="width: 100%;">Feature</th>
+						<th>ATmega32</th><th>ATmega8</th></tr>
+					<tr><td>Amplifier control (mute/standby external signals)</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>Digital audio control (feature set depends on used audio processor)</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>32-band spectrum analyzer (0..5kHz)</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>RC5 remote control support</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>English, Russian, Belarusian, Ukrainian and possible other localizations</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>FM radio support</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>Up to 60 FM stations can be saved in EEPROM</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>RC6, NEC, Samsung remotes support</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>Learning mode for remote control</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>Nice graphics (icons, fonts) on graphic LCDs</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>Alarm support (per day of week)</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>Standby timer (adjustable from 2 minutes to 5 hours)</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>No-signal standby timer</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>Sound level meter, various modes of spectrum analyzer look'n'feel</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>10 favourite FM stations support (mapped to 0..9 buttons of remote)</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>2-channels temperature control of power amplifier circuits</td>
+						<td>yes</td><td>-</td></tr>
+				</table>
+
 				<h2 id="supported-audio-processors" aria-hidden="true">Supported audio processors:</h2>
-				<ul>
-					<li>TDA7439 - 4 stereo inputs, volume/bass/middle/treble/balance control</li>
-					<li>TDA7312 - 4 stereo inputs, volume/bass/treble/balance control</li>
-					<li>TDA7313/PT2313 - 3 stereo inputs, volume/bass/treble/fade/balance/loudness control</li>
-					<li>TDA7314 - stereo input, volume/bass/treble/fade/balance/loudness control</li>
-					<li>TDA7315 - stereo input, volume/bass/treble/balance control</li>
-					<li>TDA7318 - 4 stereo inputs, volume/bass/treble/fade/balance control</li>
-					<li>PT2314 - 4 stereo inputs, volume/bass/treble/balance/loudness control</li>
-					<li>TDA7448 - 6-ch input, volume/fade/balance/center/subwoofer control </li>
-					<li>PT2323/PT2322 - 4 stereo inputs, 5.1 input, volume/bass/treble/fade/balance/center/subwoofer/surround/3d control</li>
-					<li>PGA2310 - high-end stereo volume/balance control </li>
-				</ul>
+				<table>
+					<tr><th>Audioprocessor</th><th style="width: 100%;">Feature set</th>
+						<th>ATmega32</th><th>ATmega8</th></tr>
+					<tr><td>TDA7439</td><td>4 stereo inputs, bass, middle, treble</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TDA7312</td><td>4 stereo inputs, bass, treble</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TDA7313/PT2313</td><td>3 stereo inputs, bass, treble, fade, loudness</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TDA7314</td><td>Stereo input, bass, treble, fade, loudness</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TDA7315</td><td>Stereo input, bass, treble</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TDA7318</td><td>4 stereo inputs, bass, treble, fade</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>PT2314</td><td>4 stereo inputs, bass, treble, loudness</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TDA7448</td><td>6-ch input, fade, center, subwoofer</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>PT2323/PT2322</td><td>4 stereo inputs, 5.1 input, bass, treble, fade, center, subwoofer, surround, 3d</td>
+						<td>yes</td><td>-</td></tr>
+					<tr><td>TEA6330</td><td>Stereo input, bass, treble, fade</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>PGA2310</td><td>High-end stereo volume control</td>
+						<td>yes</td><td>yes</td></tr>
+				</table>
+				
 				<h2 id="supported-displays" aria-hidden="true">Supported displays (for ATmega32):</h2>
-				<ul>
-					<li>KS0108-based 128x64 graphic display type A (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108a.png">schematic</a>)</li>
-					<li>KS0108-based 128x64 graphic display type B (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108b.png">schematic</a>)</li>
-					<li>ST7920-based 128x64 graphic display (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/st7920.png">schematic</a>)</li>
-					<li>KS0066-based 16x2 alphanumeric display (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0066.png">schematic</a>)</li>
-					<li>LS020 color 176x132 display (can be found in some Siemence mobile phones like S65) controlled via hardware SPI (<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ls020.png">schematic</a>)
-				</ul>
+				<table>
+					<tr><th style="width: 15%;">Display</th><th style="width: 100%;">Description</th>
+						<th>ATmega32</th><th>ATmega8</th></tr>
+					<tr><td>KS0108 type A</td><td>Monochrome 128x64 graphic display with direct CS1/CS2 polarity</td>
+						<td><a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108a.png">yes</a></td><td>-</td></tr>
+					<tr><td>KS0108 type B</td><td>Monochrome 128x64 graphic display with inverted CS1/CS2 polarity</td>
+						<td><a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108b.png">yes</a></td><td>-</td></tr>
+					<tr><td>ST7920</td><td>Monochrome 128x64 graphic display</td>
+						<td><a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/st7920.png">yes</a></td><td>-</td></tr>
+					<tr><td>KS0066 16x2</td><td>Monochrome alphanumeric display</td>
+						<td><a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0066.png">yes</a></td><td><a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m8/files/sch-m8.png">yes</a></td></tr>
+					<tr><td>LS020</td><td>Color 176x132 graphic display found in some Siemence mobile phones like S65</td>
+						<td><a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ls020.png">yes</a></td><td>-</td></tr>
+				</table>
+
 				<h2 id="supported-fm-tuners" aria-hidden="true">Supported FM tuners:</h2>
-				<ul>
-					<li>TEA5767 via I²C bus</li>
-					<li>RDA5807M via I²C bus</li>
-					<li>TUX032 (can be found in some Sony Car Audio) via I²C bus</li>
-					<li>Tuners with LM7001 synthesizer (disables temperature control feature)</li>
-				</ul>
+				<table>
+					<tr><th style="width: 15%;">Tuner</th><th style="width: 100%;">Description</th>
+						<th>ATmega32</th><th>ATmega8</th></tr>
+					<tr><td>TEA5767</td><td>I²C FM tuner</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>RDA5807</td><td>I²C FM tuner with RDS support</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>TUX032</td><td>I²C FM tuner found in some Sony car radio</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>LM7001</td><td>SPI-control frequency synthesizer</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>RDA5802</td><td>I²C FM tuner</td>
+						<td>yes</td><td>yes</td></tr>
+					<tr><td>RDA5807_DF</td><td>Option for RDA5807 with direct frequency input</td>
+						<td>yes</td><td>yes</td></tr>
+				</table>
+
 				<h2 id="editor" aria-hidden="true">Ampcontrol EEPROM editor</h2>
 				<p>
 					While project uses various parameters from EEPROM memory (for example, audioprocessor and tuner selection),
 					special desktop application to edit eeprom_xx.bin was designed. It allows to load, modify and save eeprom
-					binary file in easy way. Ampcontrol editor can manage only eeprom files for main (m32) branch of code.
+					binary file in easy way. Currently ampcontrol editor can manage only eeprom files for main (m32) branch of code,
+					but also can be useful in combination with hex editor in other branches, for example, for localizations.
 				<p>
-				<img src="./editor.png" width="640" />
+				<div class="centered"><img src="./editor.png" width="772" /></div>
 				</p>
 					Ampcontrol editor is written on Qt5 and it's sources are availiable on
 					<a href="https://github.com/WiseLord/ampcontrol/tree/m32/editor">Github</a>.
 					Exetuable for windows (statically compiled) can be downloaded from
 					<a href="https://www.dropbox.com/sh/nkiajkuuobk6uvi/AABCGfvy3UZC1HBU0lJsWyqKa?dl=0">Dropbox</a>
 				</p>
+
 				<h2 id="alternative-sch" aria-hidden="true">Other hardware options:</h2>
 				<ul>
 					<li>
-						<h4>Atmega16 branch</h4>
+						<h4><a href="https://github.com/WiseLord/ampcontrol/tree/m16">Atmega16</a> branch</h4>
 						<span>
 							This branch is based on old audio and tuner architecture (initially project was started on ATmega16
 							and later main MCU was changed to ATmega32), so it lacks many features
@@ -114,24 +174,22 @@
 						</span>
 					</li>
 					<li>
-						<h4>Atmega8 branch</h4>
-						<span>
-							This branch supports only 16x2 HD44780-based (KS0066-based) character displays
-							(<a href="https://raw.githubusercontent.com/WiseLord/ampcontrol/m8/files/sch-m8.png">schematic</a>).
-							Display can be connected directly or via PCF8574 I²C bus expander. In other features it repeats ATmega16 branch
-						</span>
-					</li>
-					<li>
-						<h4>Atmega8-lcd branch</h4>
+						<h4><a href="https://github.com/WiseLord/ampcontrol/tree/m8-lcd">Atmega8-lcd</a> branch</h4>
 						<span>
 							This branch is hardcoded to be used with 16x2 character display, TDA7313 audio processors
 							and it doesn't support FM radio. But it's interface localization can be switched
 							between Russian and English without EEPROM reflashing, and also it supports RC5 learning mode.
-							Both m8 and m8-lcd branches can be build for the same hardware, but pin reconfiguration may be required.
+							Both m8 and m8-lcd branches has the same pinout.
 						</span>
 					</li>
 				</ul>
-				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
+
+				<h2 id="copyright" aria-hidden="true">License</h2>
+				<p>
+					Project is open source and availiable under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL</a> license.
+				</p>
+				
+				<h2 id="useful-links" aria-hidden="true">Useful links</h2>
 				<ul>
 					<li><a href="http://radiokot.ru/circuit/audio/other/39/">First article about project (in Russian)</a></li>
 					<li><a href="http://radiokot.ru/circuit/audio/other/45/">Second article about project (in Russian)</a></li>
