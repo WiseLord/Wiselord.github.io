@@ -46,10 +46,11 @@ footer a {
 }
 
 div.centered {
+  border: 0;
   text-align: center;
 }
 
-div.centered, iframe {
+iframe {
   display: block;
   margin: 0 auto;
 }
@@ -57,10 +58,8 @@ div.centered, iframe {
 img {
   position: relative;
   margin: 0 auto;
-  max-width: 739px;
-  padding: 5px;
+  max-width: 800px;
   margin: 10px 0 10px 0;
-  border: 1px solid #dddddd;
   background-color: #eeeeee;
 
   box-shadow: 0 0 5px #ebebeb;
