@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="description" content="VolMatrix : External USB DAC">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../stylesheets/stylesheet.css">
+		<title>VolMatrix</title>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<div id="header_wrap" class="outer">
+			<header class="inner">
+				<a id="forkme_banner" href="https://github.com/WiseLord/volmatrix">View on GitHub</a>
+
+				<h1 id="project_title"><a id="home_link" href="../../"></a>VolMatrix</h1>
+				<h2 id="project_tagline">External USB DAC with remote control feature</h2>
+
+				<div id="downloads">
+					<a class="zip_download_link" href="https://github.com/WiseLord/volmatrix/zipball/master">Download as a .zip file</a>
+					<a class="tar_download_link" href="https://github.com/WiseLord/volmatrix/tarball/master">Download as a tar.gz file</a>
+				</div>
+			</header>
+		</div>
+
+		<!-- MAIN CONTENT -->
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+ 
+				<h2 id="volmatrix" aria-hidden="true">Project overview</h2>
+				<p>
+					VolMatrix is a simple audio control module supporting various audio processors
+					with I²C interface. It uses two 8x8 LED matrixes as a display.
+					There is a current time displayed in standby mode. Any RC5/RC6/NEC/Samsung remote control can be used.
+				</p>
+				<iframe width="640" height="360" src="https://www.youtube.com/embed/VJd88X46HLA" style="border: 0;" allowfullscreen></iframe>
+
+				<h2 id="main-features" aria-hidden="true">Main features:</h2>
+				<ul>
+					<li>RC5/RC6/NEC/Samsung remote control support</li>
+					<li>Remote control learning support</li>
+					<li>DS1307-compatible RTC support</li>
+				</ul>
+
+				<h2 id="sch" aria-hidden="true">Schematics</h2>
+				<div class="centered"><img src="https://raw.githubusercontent.com/WiseLord/volmatrix/master/files/volmatrix.png"/></div>
+
+				<h2 id="sch" aria-hidden="true">Remote control</h2>
+				</p>
+					To enter learn mode standby device and press 1 and 2 hardware buttons simultaneously for 2 seconds. You will see RC code and
+					index number for first function - STANDBY. If you press button on remote control you'll see RC code changes. To save this
+					code, press 3rd hardware button. Device will move to second, MUTE, function. After finishing learingn all functions
+					press 1 and 2 buttons again to exit learn mode.
+					Function index numbers are enumerated in <a href="https://github.com/WiseLord/volmatrix/blob/master/display.h#L24-L34">sources</a>.
+				</p>
+
+				<h2 id="supported-audio-processors" aria-hidden="true">Supported audio processors:</h2>
+				<table>
+					<tr><th>Audioprocessor</th><th style="width: 100%;">Feature set</th>
+					<tr><td>TDA7439</td><td>4 stereo inputs, bass, middle, treble</td>
+					<tr><td>TDA7312</td><td>4 stereo inputs, bass, treble</td>
+					<tr><td>TDA7313/PT2313</td><td>3 stereo inputs, bass, treble, fade, loudness</td>
+					<tr><td>TDA7314</td><td>Stereo input, bass, treble, fade, loudness</td>
+					<tr><td>TDA7315</td><td>Stereo input, bass, treble</td>
+					<tr><td>TDA7318</td><td>4 stereo inputs, bass, treble, fade</td>
+					<tr><td>PT2314</td><td>4 stereo inputs, bass, treble, loudness</td>
+					<tr><td>TDA7448</td><td>6-ch input, fade, center, subwoofer</td>
+					<tr><td>PT2323/PT2322</td><td>4 stereo inputs, 5.1 input, bass, treble, fade, center, subwoofer, surround, 3d</td>
+					<tr><td>TEA6300</td><td>3 stereo inputs, bass, treble, fade</td>
+					<tr><td>TEA6330</td><td>Stereo input, bass, treble, fade</td>
+				</table>
+
+				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
+				<ul>
+					<li><a href="http://radiokot.ru/konkursCatDay2015/10/">First article about project</a> (in Russian)</li>
+					<li><a href="http://radiokot.ru/forum/viewtopic.php?t=121583">Forum thread</a> (in Russian)</li>
+				</ul>
+
+			</section>
+		</div>
+
+		<!-- FOOTER  -->
+		<div id="footer_wrap" class="outer">
+			<footer class="inner">
+				<p class="copyright">VolMatrix project is maintained by <a href="https://github.com/WiseLord">WiseLord</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
