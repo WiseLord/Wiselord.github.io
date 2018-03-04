@@ -26,7 +26,7 @@
 		<div id="main_content_wrap" class="outer">
 			<section id="main_content" class="inner">
 
-        {{ page.content }}
+        {{page.content | markdownify}}
 
 			</section>
 		</div>
@@ -34,7 +34,10 @@
 		<!-- FOOTER  -->
 		<div id="footer_wrap" class="outer">
 			<footer class="inner">
-			  <p class="copyright">{{page.title}} project is maintained by <a href="https://github.com/WiseLord">WiseLord</a></p>
+				<p class="copyright">
+					{{page.title}} project is maintained by <a href="https://github.com/WiseLord">WiseLord</a>.
+					License: <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL</a>
+				</p>
 			</footer>
 		</div>
 	</body>
