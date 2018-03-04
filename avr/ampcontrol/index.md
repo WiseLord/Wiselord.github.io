@@ -68,19 +68,12 @@ Also [ATmega8](https://github.com/WiseLord/ampcontrol/tree/m8) version is under 
 # Schematics
 
 * ATmega32:
-
     * [KS0108 type A](https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108a.png)
-
     * [KS0108 type B](https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0108b.png)
-
     * [ST7920](https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/st7920.png)
-
     * [KS0066 16x2](https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ks0066.png)
-
     * [LS020](https://raw.githubusercontent.com/WiseLord/ampcontrol/m32/files/sch/ls020.png)
-
 * ATmega8:
-
     * [KS0066 16x2](https://raw.githubusercontent.com/WiseLord/ampcontrol/m8/files/sch-m8.png)
 
 # Supported FM tuners
@@ -115,8 +108,6 @@ Ampcontrol editor is written on Qt5 and it's sources are availiable on <a href="
 
 # Useful links
 
-* [First article about project](http://radiokot.ru/circuit/audio/other/39) (in Russian)
-
-* [Second article about project](href="http://radiokot.ru/circuit/audio/other/45) (in Russian)
-
+* [First article about the project](http://radiokot.ru/circuit/audio/other/39) (in Russian)
+* [Second article about the project](href="http://radiokot.ru/circuit/audio/other/45) (in Russian)
 * [Forum thread](http://radiokot.ru/forum/viewtopic.php?t=98758) (in Russian)
