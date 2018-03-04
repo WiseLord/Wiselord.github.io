@@ -1,110 +1,77 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset='utf-8'>
-		<meta name="description" content="FM7Segm : ATmega8-based simple FM tuner clock and temperature">
-		<link rel="stylesheet" type="text/css" media="screen" href="../../stylesheets/stylesheet.css">
-		<title>FM7Segm</title>
-	</head>
-	<body>
-		<!-- HEADER -->
-		<div id="header_wrap" class="outer">
-			<header class="inner">
-				<a id="forkme_banner" href="https://github.com/WiseLord/fm7segm">View on GitHub</a>
+---
+layout: avrproject
+title: FM7Segm
+description: Simple FM tuner with clock and temperature
+project: fm7segm
+---
 
-				<h1 id="project_title"><a id="home_link" href="../../"></a>FM7Segm</h1>
-				<h2 id="project_tagline">Simple FM tuner with clock and temperature</h2>
+<h2 id="fm7segm" aria-hidden="true">Project overview</h2>
+<p>
+	This project is a simple FM radio tuner with 4-digits LED indication. Up to 50 FM stations can
+	be stored in EEPROM memory of ATmega8 MCU. Also device can show current time and temperature.
+</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/3I_dFwAWISo" style="border: 0;" allowfullscreen></iframe>
 
-				<div id="downloads">
-					<a class="zip_download_link" href="https://github.com/WiseLord/fm7segm/zipball/master">Download as a .zip file</a>
-					<a class="tar_download_link" href="https://github.com/WiseLord/fm7segm/tarball/master">Download as a tar.gz file</a>
-				</div>
-			</header>
-		</div>
+<h2 id="main-features" aria-hidden="true">Main features:</h2>
+<table>
+	<tr><th style="width: 100%;">Feature description</th>
+		<th>Supported</th></tr>
+	<tr><td>FM radio support</td>
+		<td>yes</td></tr>
+	<tr><td>Up to 60 FM stations can be saved in EEPROM</td>
+		<td>yes</td></tr>
+	<tr><td>Common cathode indicators with direct connection do digits</td>
+		<td>yes</td></tr>
+	<tr><td>Common anode indicators with direct connection do digits</td>
+		<td>yes</td></tr>
+	<tr><td>Common cathode indicators with transistor on digits</td>
+		<td>yes</td></tr>
+	<tr><td>Common anode indicators with transistor on digits</td>
+		<td>yes</td></tr>
+	<tr><td>Indicator brightness control (12 levels)</td>
+		<td>yes</td></tr>
+	<tr><td>RDA580x internal volume control support</td>
+		<td>yes</td></tr>
+	<tr><td>PWM volume control on other tuners</td>
+		<td>yes</td></tr>
+	<tr><td>RTC DS1307 support (DS323x also are working)</td>
+		<td>yes</td></tr>
+	<tr><td>Temperature sensors DS18x20</td>
+		<td>yes</td></tr>
+</table>
 
-		<!-- MAIN CONTENT -->
-		<div id="main_content_wrap" class="outer">
-			<section id="main_content" class="inner">
+<h2 id="supported-fm-tuners" aria-hidden="true">Supported FM tuners:</h2>
+<table>
+	<tr><th style="width: 15%;">Tuner</th><th style="width: 100%;">Description</th>
+		<th>Supported</th></tr>
+	<tr><td>TEA5767</td><td>I²C FM tuner</td>
+		<td>yes</td></tr>
+	<tr><td>RDA5807</td><td>I²C FM tuner with RDS support</td>
+		<td>yes</td></tr>
+	<tr><td>TUX032</td><td>I²C FM tuner found in some Sony car radio</td>
+		<td>yes</td></tr>
+	<tr><td>LM7001</td><td>SPI-control frequency synthesizer</td>
+		<td>yes</td></tr>
+	<tr><td>RDA5802</td><td>I²C FM tuner</td>
+		<td>yes</td></tr>
+	<tr><td>RDA5807_DF</td><td>Option for RDA5807 with direct frequency input</td>
+		<td>yes</td></tr>
+</table>
 
-				<h2 id="fm7segm" aria-hidden="true">Project overview</h2>
-				<p>
-					This project is a simple FM radio tuner with 4-digits LED indication. Up to 50 FM stations can
-					be stored in EEPROM memory of ATmega8 MCU. Also device can show current time and temperature.
-				</p>
-				<iframe width="640" height="360" src="https://www.youtube.com/embed/3I_dFwAWISo" style="border: 0;" allowfullscreen></iframe>
+<h2 id="schematic" aria-hidden="true">Schematic:</h2>
+<p>First pinout:</p>
+<div class="centered"><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">
+	<img src="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png" width="640"/></a></div>
+<p>Second pinout:</p>
+<div class="centered"><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">
+	<img src="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin2_sch.png" width="640"/></a></div>
+<p>
+	Both pinouts can be used with any FM tuner supported and any indicator type and connection combination.
+	All this can be configured via Makefile and pins.h files.
+</p>
 
-				<h2 id="main-features" aria-hidden="true">Main features:</h2>
-				<table>
-					<tr><th style="width: 100%;">Feature description</th>
-						<th>Supported</th></tr>
-					<tr><td>FM radio support</td>
-						<td>yes</td></tr>
-					<tr><td>Up to 60 FM stations can be saved in EEPROM</td>
-						<td>yes</td></tr>
-					<tr><td>Common cathode indicators with direct connection do digits</td>
-						<td>yes</td></tr>
-					<tr><td>Common anode indicators with direct connection do digits</td>
-						<td>yes</td></tr>
-					<tr><td>Common cathode indicators with transistor on digits</td>
-						<td>yes</td></tr>
-					<tr><td>Common anode indicators with transistor on digits</td>
-						<td>yes</td></tr>
-					<tr><td>Indicator brightness control (12 levels)</td>
-						<td>yes</td></tr>
-					<tr><td>RDA580x internal volume control support</td>
-						<td>yes</td></tr>
-					<tr><td>PWM volume control on other tuners</td>
-						<td>yes</td></tr>
-					<tr><td>RTC DS1307 support (DS323x also are working)</td>
-						<td>yes</td></tr>
-					<tr><td>Temperature sensors DS18x20</td>
-						<td>yes</td></tr>
-				</table>
-
-				<h2 id="supported-fm-tuners" aria-hidden="true">Supported FM tuners:</h2>
-				<table>
-					<tr><th style="width: 15%;">Tuner</th><th style="width: 100%;">Description</th>
-						<th>Supported</th></tr>
-					<tr><td>TEA5767</td><td>I²C FM tuner</td>
-						<td>yes</td></tr>
-					<tr><td>RDA5807</td><td>I²C FM tuner with RDS support</td>
-						<td>yes</td></tr>
-					<tr><td>TUX032</td><td>I²C FM tuner found in some Sony car radio</td>
-						<td>yes</td></tr>
-					<tr><td>LM7001</td><td>SPI-control frequency synthesizer</td>
-						<td>yes</td></tr>
-					<tr><td>RDA5802</td><td>I²C FM tuner</td>
-						<td>yes</td></tr>
-					<tr><td>RDA5807_DF</td><td>Option for RDA5807 with direct frequency input</td>
-						<td>yes</td></tr>
-				</table>
-
-				<h2 id="schematic" aria-hidden="true">Schematic:</h2>
-				<p>First pinout:</p>
-				<div class="centered"><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">
-					<img src="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png" width="640"/></a></div>
-				<p>Second pinout:</p>
-				<div class="centered"><a href="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png">
-					<img src="https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin2_sch.png" width="640"/></a></div>
-				<p>
-					Both pinouts can be used with any FM tuner supported and any indicator type and connection combination.
-					All this can be configured via Makefile and pins.h files.
-				</p>
-				
-				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
-				<ul>
-					<li><a href="http://radiokot.ru/circuit/digital/home/202/">First article about project</a> (in Russian)</li>
-					<li><a href="http://radiokot.ru/forum/viewtopic.php?t=109632">Forum thread</a> (in Russian)</li>
-				</ul>
-
-			</section>
-		</div>
-
-		<!-- FOOTER  -->
-		<div id="footer_wrap" class="outer">
-			<footer class="inner">
-				<p class="copyright">FM7Segm project is maintained by <a href="https://github.com/WiseLord">WiseLord</a></p>
-			</footer>
-		</div>
-	</body>
-</html>
+<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
+<ul>
+	<li><a href="http://radiokot.ru/circuit/digital/home/202/">First article about project</a> (in Russian)</li>
+	<li><a href="http://radiokot.ru/forum/viewtopic.php?t=109632">Forum thread</a> (in Russian)</li>
+</ul>

@@ -1,81 +1,48 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset='utf-8'>
-		<meta name="description" content="MatrixClock : ATmega8-based LED matrix clock">
-		<link rel="stylesheet" type="text/css" media="screen" href="../../stylesheets/stylesheet.css">
-		<title>MatrixClock</title>
-	</head>
-	<body>
-		<!-- HEADER -->
-		<div id="header_wrap" class="outer">
-			<header class="inner">
-				<a id="forkme_banner" href="https://github.com/WiseLord/matrixclock">View on GitHub</a>
+---
+layout: avrproject
+title: MatrixClock
+description: Simple LED matrix alarmclock with temperature measuring
+project: matrixclock
+---
 
-				<h1 id="project_title"><a id="home_link" href="../../"></a>MatrixClock</h1>
-				<h2 id="project_tagline">Simple LED matrix alarmclock with temperature measuring</h2>
+<h2 id="matrixclock" aria-hidden="true">Project overview</h2>
+<p>
+	This project is a simple LED matrix clock. It can use either MAX7219 as LED drivers (one IC per matrix)
+	either HT1632 LED driver. It's possible to use 3 or 4 matrixes, but recent code is more suitable for second option.
+</p>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/mCT93ut2W2s" style="border: 0;" allowfullscreen></iframe>
 
-				<div id="downloads">
-					<a class="zip_download_link" href="https://github.com/WiseLord/matrixclock/zipball/master">Download as a .zip file</a>
-					<a class="tar_download_link" href="https://github.com/WiseLord/matrixclock/tarball/master">Download as a tar.gz file</a>
-				</div>
-			</header>
-		</div>
+<h2 id="main-features" aria-hidden="true">Main features:</h2>
+<ul>
+	<li>RTC DS1307 support (DS3231 also works)</li>
+	<li>One alarm which can be enabled for any day of week</li>
+	<li>Active beeper is used for alarm and signals</li>
+	<li>Temperature measurement with DS18B20 sensors</li>
+	<li>Pressure/temperature measurement with BMP180 sensor</li>
+	<li>Humidity/temperature measurement with DHT22 sensor</li>
+	<li>Scrolling date and sensors data strings</li>
+	<li>Reducing brigtness in darkness</li>
+</ul>
 
-		<!-- MAIN CONTENT -->
-		<div id="main_content_wrap" class="outer">
-			<section id="main_content" class="inner">
+<h2 id="supported-led-drivers" aria-hidden="true">Supported LED drivers:</h2>
+<ul>
+	<li>MAX7219 (one per LED matrix). Pinout and schematic are <a href="http://radiokot.ru/circuit/digital/home/206/05.png">here</a></li>
+	<li>HT1632 (one for 4 matrixes). Pinout for <u>JY-MCU 3208CLOCK PRO</u> module</li>
+</ul>
 
-				<h2 id="matrixclock" aria-hidden="true">Project overview</h2>
-				<p>
-					This project is a simple LED matrix clock. It can use either MAX7219 as LED drivers (one IC per matrix)
-					either HT1632 LED driver. It's possible to use 3 or 4 matrixes, but recent code is more suitable for second option.
-				</p>
-				<iframe width="640" height="360" src="https://www.youtube.com/embed/mCT93ut2W2s" style="border: 0;" allowfullscreen></iframe>
+<h2 id="editor" aria-hidden="true">Matrixclock EEPROM editor</h2>
+<p>
+	While project uses various parameters from EEPROM memory special desktop application to edit eeprom
+	matrixclock_xx.bin was designed. It allows to load, modify and save eeprom binary file in easy way.
+<p>
+<div class="centered"><img src="./editor.png"/></div>
+</p>
+	Matrixclock editor is written on Qt5 and it's sources are availiable on
+	<a href="https://github.com/WiseLord/matrixclock/tree/master/editor">Github</a>.
+</p>
 
-				<h2 id="main-features" aria-hidden="true">Main features:</h2>
-				<ul>
-					<li>RTC DS1307 support (DS3231 also works)</li>
-					<li>One alarm which can be enabled for any day of week</li>
-					<li>Active beeper is used for alarm and signals</li>
-					<li>Temperature measurement with DS18B20 sensors</li>
-					<li>Pressure/temperature measurement with BMP180 sensor</li>
-					<li>Humidity/temperature measurement with DHT22 sensor</li>
-					<li>Scrolling date and sensors data strings</li>
-					<li>Reducing brigtness in darkness</li>
-				</ul>
-
-				<h2 id="supported-led-drivers" aria-hidden="true">Supported LED drivers:</h2>
-				<ul>
-					<li>MAX7219 (one per LED matrix). Pinout and schematic are <a href="http://radiokot.ru/circuit/digital/home/206/05.png">here</a></li>
-					<li>HT1632 (one for 4 matrixes). Pinout for <u>JY-MCU 3208CLOCK PRO</u> module</li>
-				</ul>
-
-				<h2 id="editor" aria-hidden="true">Matrixclock EEPROM editor</h2>
-				<p>
-					While project uses various parameters from EEPROM memory special desktop application to edit eeprom
-					matrixclock_xx.bin was designed. It allows to load, modify and save eeprom binary file in easy way.
-				<p>
-				<div class="centered"><img src="./editor.png"/></div>
-				</p>
-					Matrixclock editor is written on Qt5 and it's sources are availiable on
-					<a href="https://github.com/WiseLord/matrixclock/tree/master/editor">Github</a>.
-				</p>
-
-				<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
-				<ul>
-					<li><a href="http://radiokot.ru/circuit/digital/home/206/">First article about project</a> (in Russian)</li>
-					<li><a href="http://radiokot.ru/forum/viewtopic.php?t=112934">Forum thread</a> (in Russian)</li>
-				</ul>
-
-			</section>
-		</div>
-
-		<!-- FOOTER  -->
-		<div id="footer_wrap" class="outer">
-			<footer class="inner">
-				<p class="copyright">MatrixClock project is maintained by <a href="https://github.com/WiseLord">WiseLord</a></p>
-			</footer>
-		</div>
-	</body>
-</html>
+<h2 id="useful-links" aria-hidden="true">Useful links:</h2>
+<ul>
+	<li><a href="http://radiokot.ru/circuit/digital/home/206/">First article about project</a> (in Russian)</li>
+	<li><a href="http://radiokot.ru/forum/viewtopic.php?t=112934">Forum thread</a> (in Russian)</li>
+</ul>
