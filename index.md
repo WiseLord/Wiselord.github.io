@@ -2,7 +2,7 @@
 layout: default
 title: WiseLord projects
 description: My various projects on GitHub
-project: ampcontrol
+project:
 ---
 
 # [Ampcontrol](avr/ampcontrol)
