@@ -86,7 +86,7 @@ Also, [ATmega8](https://github.com/WiseLord/ampcontrol/tree/m8) version is under
     * [KS0108 type B](https://raw.githubusercontent.com/WiseLord/ampcontrol/m16/files/sch/ampcontrol_gd_b.png)
     * [KS0066 16x2](https://raw.githubusercontent.com/WiseLord/ampcontrol/m16/files/sch/ampcontrol_lcd.png)
 * ATmega8:
-    * [KS0066 16x2](https://raw.githubusercontent.com/WiseLord/ampcontrol/m16/files/sch-m8.png)
+    * [KS0066 16x2](https://raw.githubusercontent.com/WiseLord/ampcontrol/m8/files/sch-m8.png)
 
 # Supported FM tuners
 
