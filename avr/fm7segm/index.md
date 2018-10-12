@@ -46,7 +46,7 @@ This project is a simple FM radio tuner with 4-digits LED indication. Up to 50 F
 
 * Second pinout:
 
-	![Second pinout](https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin1_sch.png)
+	![Second pinout](https://raw.githubusercontent.com/WiseLord/fm7segm/master/files/fm7segm_pin2_sch.png)
 
 Both pinouts can be used with any FM tuner supported and any indicator type and connection combination. All this can be configured via Makefile and pins.h files.
 
