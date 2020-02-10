@@ -124,7 +124,7 @@ Remote application is also written with Qt5 and it's sources can be get from [Gi
 
 * [Atmega8-lcd](https://github.com/WiseLord/ampcontrol/tree/m8-lcd) branch
 
-    This branch is hardcoded to be used with 16x2 character display, TDA7313 audio processors and it doesn't support FM radio. But it's interface localization can be switched between Russian and English without EEPROM reflashing, and also it supports RC5 learning mode. Both m8 and m8-lcd branches has the same pinout.
+This branch is hardcoded to be used with 16x2 character display, TDA7313 audio processors and it doesn't support FM radio. But it's interface localization can be switched between Russian and English without EEPROM reflashing, and also it supports RC5 learning mode. Both m8 and m8-lcd branches has the same pinout.
 
 # Useful links
 
